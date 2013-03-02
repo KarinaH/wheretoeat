@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p.lead>
+  <b>Name:</b>
+  <%= @guide.name %>
+</p>
+
+<dl class="dl-horizontal">
+  <dt>Kategorie:</dt>
+ <dd> <%= @guide.kategorie %> </dd>
+</dl>
+
+<p>
+  <b>Adresse:</b>
+  <%= @guide.adresse %>
+</p>
+
+<p>
+  <b>Bild:</b>
+  <%= image_tag(@guide.bild_url, :width => 600) if @guide.bild.present? %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%= @guide.rank %>
+</p>
+
+<p>
+  <b>Notiz:</b>
+  <%= @guide.notiz %>
+</p>
+
+
+<%= link_to 'Edit', edit_guide_path(@guide) %> |
+<%= link_to 'Back', guides_path %>
